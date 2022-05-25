@@ -1,13 +1,17 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
-import ListUsers from '../ListUsers';
 import { Button, Input } from '@mui/material';
+// components
+import ListUsers from '../ListUsers';
+// styles
 import style from './Form.module.scss';
 const Form = () => {
+	// states
 	const [name, setName] = useState();
 	const [number, setNumber] = useState();
 	const [user, setUser] = useState([]);
 
+	// helpers
 	const handleChangeInputName = e => {
 		setName(e.target.value);
 	};

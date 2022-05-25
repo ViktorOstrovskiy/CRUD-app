@@ -1,11 +1,14 @@
 import { Modal, Box, Typography } from '@mui/material';
 import { useState } from 'react';
 import { Button, Input } from '@mui/material';
+// styles
 import style from './ModalEdit.module.scss';
 
 const ModalEdit = ({ open, handleClose, user, editUser }) => {
+	// states
 	const [edit, setEdit] = useState(user);
 
+	// helpers
 	const change = e => {
 		setEdit({ ...edit, [e.target.name]: e.target.value });
 	};
